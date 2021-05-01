@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+    db:
+        restart: unless-stopped
+        image: postgres
+        env_file:
+            - .env
+        volumes: 
+            - ./dbdata:/var/lib/postgresql/data
+    web:
+        build: .
+        env_file: 
+            - .env
+        environment: 
+            - DB_HOST=db
+            - WAIT_HOSTS=db:5432
+            - WAIT_HOSTS_TIMEOUT=300
+            - WAIT_SLEEP_INTERVAL=30
+            - WAIT_HOST_CONNECT_TIMEOUT=30
+        command: sh -c "/wait && /ready && /migrate_and_run"
+        volumes:
+            - .:/code
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db

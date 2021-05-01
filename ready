@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Postgres db is running"
+echo 💥 Congratulations and see you later 💥
+echo ---
