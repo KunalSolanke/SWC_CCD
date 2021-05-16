@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'drf_spectacular',
+    'sidebar',
+    'why_recruit_at_IITG',
 ]
 
 MIDDLEWARE = [
