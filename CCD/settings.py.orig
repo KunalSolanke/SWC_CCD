@@ -33,19 +33,20 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.content',
+    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'drf_spectacular',
+<<<<<<< HEAD
     'HotelsCabs',
     'facilities',
     'reachingIITG',
     'pastRecruiters',
+=======
     'contactus',
-    'student_utilities',
-    'lifeatiitg',
-    'home',
+    'student_utilities'
+>>>>>>> main
 ]
 
 MIDDLEWARE = [
