@@ -5,7 +5,7 @@ class About(models.Model):
     about = models.CharField(max_length=100)
 
 class campusrecruitment(models.Model):
-    title = models.CharField(max_length=10)
+    title = models.CharField(max_length=50)
     content1 = models.CharField(max_length=100)
     content2 = models.CharField(max_length=100)
     content3 = models.CharField(max_length=100)
