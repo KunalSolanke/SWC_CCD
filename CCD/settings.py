@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'drf_spectacular',
     'contactus',
-    'student_utilities'
+    'student_utilities',
+    'lifeatiitg',
+    'home',
 ]
 
 MIDDLEWARE = [
