@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.content',
+    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'student_utilities',
     'lifeatiitg',
     'home',
+    'faq',
+    'policies',
 ]
 
 MIDDLEWARE = [
