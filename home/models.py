@@ -5,7 +5,7 @@ from django.contrib.postgres.fields import ArrayField
 class About(models.Model):
     about = models.CharField(max_length=100)
 
-class Campusrecruitment(models.Model):
+class CampusRecuitment(models.Model):
     title = models.CharField(max_length=50)
     content = ArrayField(models.CharField(max_length=100),max_length=4)
     # content1 = models.CharField(max_length=100)
