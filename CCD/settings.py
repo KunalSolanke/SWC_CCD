@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'student_utilities',
     'lifeatiitg',
     'home',
+    'FAQ',
+    'policies',
 ]
 
 MIDDLEWARE = [
