@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 class About(models.Model):
@@ -6,11 +7,13 @@ class About(models.Model):
 
 class campusrecruitment(models.Model):
     title = models.CharField(max_length=50)
-    content1 = models.CharField(max_length=100)
-    content2 = models.CharField(max_length=100)
-    content3 = models.CharField(max_length=100)
+    content = ArrayField(models.CharField(max_length=100),max_length=4)
+    # content1 = models.CharField(max_length=100)
+    # content2 = models.CharField(max_length=100)
+    # content3 = models.CharField(max_length=100)
 
 class acknowledgement(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='img',max_length=100)
-    content = models.CharField(max_length=100)
+    content = models.CharField(max_length=1000)
+    link = models.URLField(max_length=100)
