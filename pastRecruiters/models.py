@@ -1,14 +1,11 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 
 class PastRecruiters(models.Model):
     name = models.CharField(max_length=300)
-
-class QuickLinks(models.Model):
-    Quick_link_name = models.CharField(max_length=300)
-    Quick_link_url = models.URLField(max_length=400)
+    links = models.URLField(max_length=400)
+    description = models.TextField(max_length=1000)
+    names_of_companies = ArrayField(models.CharField(max_length=2000))
     
-class DownloadLinks(models.Model):
-    Download_link_name = models.CharField(max_length=300)
-    Download_link_url = models.URLField(max_length=400)

@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.core.validators import RegexValidator
+from django.contrib.postgres.fields import ArrayField
 
 
 class Hotels(models.Model):
@@ -22,3 +23,8 @@ class Cabs(models.Model):
 class HotelLinks(models.Model):
     information = models.TextField(max_length=1000)
     website_link = models.URLField(max_length=400)
+    uploadFile = models.FileField(upload_to ='uploads/')
+    listOfFiles = models.ArrayField(models.FileField())
+    nameOfFiles = models.ArrayField(models.CharField())
+
+    
