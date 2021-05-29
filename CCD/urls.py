@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -22,4 +23,6 @@ urlpatterns = [
         name="redoc",
     ),
     path('admin/', admin.site.urls),
+    path("",include('home.urls')),
+    path("",include('lifeatiitg.urls')),
 ]
