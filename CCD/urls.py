@@ -6,6 +6,16 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
+from django.urls import include, path
+from rest_framework import routers
+from faq import views
+from policies import views as viewss
+
+router = routers.DefaultRouter()
+""" router.register(r'Placement_policy', viewss.Placement_Policy_ViewSet) """
+router.register(r'Policies', viewss.Policy_ViewSet)
+router.register(r'FAQ', views.FaqViewSet)
+
 app_name="home"
 urlpatterns = [
     # YOUR PATTERNS
@@ -22,4 +32,6 @@ urlpatterns = [
         name="redoc",
     ),
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
